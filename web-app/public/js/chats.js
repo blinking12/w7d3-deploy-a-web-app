@@ -4,7 +4,7 @@ var messageInput = document.getElementById('message')
 
 function searchEnter(event) {
     if (event.key === 'Enter') {
-        fetchIt(messageInput.value)
+        fetchIt()
         // console.log('Enter')
     }
 }
