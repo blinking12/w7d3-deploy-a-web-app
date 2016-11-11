@@ -11,10 +11,6 @@ class ChatsController {
 
     }
 
-  * create(request, response) {
-    //
-  }
-
   * store(request, response) {
       var message = request.input('message')
 
@@ -30,25 +26,12 @@ class ChatsController {
         })
 
   // save the message to your Chat model here...
+        var chat = new Chat()
+        chat.message = message
+        yield chat.save()
 
-  response.json(true)
+        response.json(true)
 
-  }
-
-  * show(request, response) {
-    //
-  }
-
-  * edit(request, response) {
-    //
-  }
-
-  * update(request, response) {
-    //
-  }
-  
-  * destroy(request, response) {
-    //
   }
 
 }
