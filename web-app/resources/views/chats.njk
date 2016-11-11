@@ -1,0 +1,20 @@
+{% extends 'masterChats' %}
+{% block chats %}
+
+<div class="container">
+    <label for="usr">Message:</label>
+    <input name="message" type="text" class="form-control" id="usr">
+
+    <ul id="messages" class="list-group">
+
+    {% for chat in chats %}
+    <li class="list-group-item">
+        {{ chat.message }}
+    </li>
+    {% endfor %}
+
+    </ul>
+</div>
+
+
+{% endblock %}
